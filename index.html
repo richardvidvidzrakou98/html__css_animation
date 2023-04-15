@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size:  100% 100%;
+            background-attachment: fixed;
+        }
+        #center-div {
+            margin-left: 45%;
+          /* display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh; */
+        }
+        
+        #myButton {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          /* z-index: 2; */
+          transition-duration: 0.4s;
+          cursor: pointer;
+          animation: pulse 1.5s infinite;
+        }
+        
+        #myButton:hover {
+          background-color: #3e8e41;
+        }
+        
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<audio id="myAudio" autoplay loop>
+    <source src="never_give_up.mp3" type="audio/mpeg">
+</audio>
+<body background="bg.jpg">
+    <marquee id="marquee1" scrollamount="7">
+        <img src="birds.gif" alt="" width="16%"/>
+    </marquee>
+    <div id="center-div">
+        <button id="myButton" onclick="toggleAudio()">Pause/Play</button>
+    </div>
+    <marquee id="marquee2" behavior="" direction="right" scrollamount="7">
+        <img src="1.gif" alt="" width="26%"/>
+        <img src="2.gif" alt="" width="22%"/>
+        <img src="3.gif" alt="" width="16%"/>
+        <img src="4.gif" alt="" width="30%"/>
+    </marquee>
+    
+    <!-- <div class="img">
+        <img src="myIMG.png" alt="">
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>
